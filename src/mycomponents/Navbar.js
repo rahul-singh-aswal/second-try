@@ -70,21 +70,7 @@ export const Navbar = () => {
                 <img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  width="10%"  alt= "fb" className="facebook" />
               </a>
             </li>
-            <li>
-            <i className="fas fa-band-aid">djudbdn</i>
-<i className="fas fa-cat">jdsjbdn</i>
-<i className="fas fa-dragon">hd in nr </i>
-<i className="far fa-clock">bdhdndm</i>
-<i className="fas fa-clock">bdudndnr</i>
-</li>
-            <li>
-              <a
-                href="https://www.instagram.com/thapatechnical/"
-                target="_thapa">Instagram
-                <img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  width="10%"  alt= "fb" className="facebook" />
-              
-                   </a>
-            </li>
+            
             <li>
               <a
                 href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
