@@ -1,50 +1,35 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import {SidebarData} from "./Sidebar";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutubeSquare,
+} from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const [sidebar, setSidebar]= useState(false);
-  const showsidebar = () => setSidebar(!sidebar);
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <>
-  
-        {/* Sidebar v1 */}
-        <div className="navbar">
-        <Link to="#" className="navbar">
-        <  img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  onClick = {showsidebar} width="10%" />
-        </Link>
+      <nav className="main-nav">
+        {/* 1st logo part  */}
+        <div className="logo">
+          <h2>
+            <span>T</span>hapa
+            <span>T</span>echnical
+          </h2>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className= 'nav-menu-items'>
-        <li className = "nav-toggle">
-        <Link to="#" className ="menu-bars">
-        
-           <img src="https://1462_mobior-baefoot-resort-vacations-hamburger-menu.png"  alt="×" width="10%" />
-        </Link> </li>
-        {SidebarData.map((item,index) => {
-        	return (
-        <li key={index} className={item.cName} >
-        <Link to={item.path}>
-        {item.icon}
-        <span>{item.title}</span>
-        </Link>
-        </li>
-        );
-        })}
-        
-        </ul>
-</nav>
-<nav>
-        
 
         {/* 2nd menu part  */}
         <div
-          >
+          className={
+            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+          }>
           <ul>
             <li>
-              <NavLink to="#">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/about">about</NavLink>
@@ -62,31 +47,32 @@ export const Navbar = () => {
         <div className="social-media">
           <ul className="social-media-desktop">
             <li>
-            
               <a
                 href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                target="_thapa">FACEBOOK
-<i className="fas fa-dragon">Dragon</i>
-                <img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  width="10%"  alt= "fb" className="facebook" />
+                target="_thapa">
+                <FaFacebookSquare className="facebook" />
               </a>
             </li>
-            
+            <li>
+              <a
+                href="https://www.instagram.com/thapatechnical/"
+                target="_thapa">
+                <FaInstagramSquare className="instagram" />
+              </a>
+            </li>
             <li>
               <a
                 href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                target="_thapa">YouTube
-                <img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  width="10%"  alt= "fb" className="facebook" />
+                target="_thapa">
+                <FaYoutubeSquare className="youtube" />
               </a>
             </li>
           </ul>
 
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
-            <a href="#" 
->
-            <img src="https://www.pngkey.com/png/full/332-3321462_mobile-menu-for-barefoot-resort-vacations-hamburger-menu.png"  width="10%"  alt= "fb" className="facebook" />
-              
-             
+            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+              <GiHamburgerMenu />
             </a>
           </div>
         </div>
