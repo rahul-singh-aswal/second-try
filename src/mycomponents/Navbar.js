@@ -17,8 +17,9 @@ export const Navbar = () => {
         {/* 1st logo part  */}
         <div className="logo">
           <h2>
-            <span>T</span>hapa
-            <span>T</span>echnical
+            <span>R</span>ahul
+            <span>S</span>ingh
+<span>A</span>swal
           </h2>
         </div>
 
